@@ -26,7 +26,7 @@ const Navbar = (props: Props) => {
       initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ ease: "easeInOut", duration: 0.5 }}
-      className="hidden w-full items-center justify-between py-9 sm:flex"
+      className=" w-full items-center justify-between py-9 sm:flex"
     >
       <div className="flex items-center gap-x-32">
         <img src="/logo.png" alt="logo" className="h-20 w-20" />
