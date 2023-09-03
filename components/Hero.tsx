@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 
-const Hero = (props: Props) => {
+const Hero = () => {
   return (
     <div className="flex min-h-[calc(100vh-350px)] w-full items-center justify-between">
       <div className="flex flex-col justify-center">
