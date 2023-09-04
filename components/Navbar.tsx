@@ -21,7 +21,7 @@ const links = [
 type Props = {};
 const Navbar = (props: Props) => {
   return (
-    <nav className="pointer-events-none fixed z-10 flex w-full flex-col items-center justify-center border-b border-gray-600 md:pointer-events-auto">
+    <nav className="pointer-events-none fixed top-0 z-10 flex w-full flex-col items-center justify-center border-b border-gray-600 md:pointer-events-auto">
       <motion.div
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
@@ -105,7 +105,7 @@ const MobileNavbar = () => {
 
 const MobileBar = () => {
   return (
-    <div className="pointer-events-none flex min-h-[calc(100dvh-112px)] w-full flex-col  justify-end md:hidden">
+    <div className="pointer-events-none fixed bottom-0 flex w-full flex-col justify-end md:hidden">
       <div className="pointer-events-auto grid w-full grid-cols-3  grid-rows-1 border-t border-gray-600/50 backdrop-blur-3xl">
         <button className="group relative flex flex-col items-center justify-center gap-y-2 border-r border-gray-600/50 pb-2 pt-6 hover:bg-gray-900/40">
           <svg
