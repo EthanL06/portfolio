@@ -105,7 +105,7 @@ const MobileNavbar = () => {
 
 const MobileBar = () => {
   return (
-    <div className="pointer-events-none flex min-h-[calc(100vh-112px)] w-full flex-col  justify-end md:hidden">
+    <div className="pointer-events-none flex min-h-[calc(100svh-112px)] w-full flex-col  justify-end md:hidden">
       <div className="pointer-events-auto grid w-full grid-cols-3  grid-rows-1 border-t border-gray-600/50 backdrop-blur-3xl">
         <button className="group relative flex flex-col items-center justify-center gap-y-2 border-r border-gray-600/50 pb-2 pt-6 hover:bg-gray-900/40">
           <svg
