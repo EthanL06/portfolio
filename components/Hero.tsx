@@ -1,10 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
+import HeroImage from "./HeroImage";
 
 const Hero = () => {
   return (
-    <div className="flex min-h-[calc(100vh-350px)] w-full items-center justify-between">
+    <div className="flex min-h-screen w-full items-center justify-between">
       <div className="flex flex-col justify-center">
         <motion.div
           initial={{ width: 0 }}
@@ -28,32 +29,42 @@ const Hero = () => {
         <div className="mt-4 flex w-full gap-x-4">
           <motion.button
             initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ ease: "easeInOut", delay: 1.2, duration: 0.5 }}
-            className="relative bottom-0 mt-8 rounded-md bg-purple-accent px-6 py-4 text-lg font-bold transition-all duration-200 hover:shadow-[0_0_100px_100px_rgba(255,255,255,0.1)_inset] active:scale-95 "
+            animate={{
+              opacity: 1,
+              y: 0,
+              transition: { delay: 1.2, duration: 0.5, ease: "easeInOut" },
+            }}
+            whileTap={{ scale: 0.95 }}
+            className=" mt-8 rounded-md bg-purple-accent px-6 py-4 text-lg font-bold transition-shadow duration-200 hover:shadow-[0_0_100px_100px_rgba(255,255,255,0.1)_inset] "
           >
             Explore my Projects
           </motion.button>
 
           <motion.button
             initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ ease: "easeInOut", delay: 1.5, duration: 0.5 }}
-            className="relative bottom-0 mt-8 rounded-md border-purple-accent bg-transparent px-6 py-4 text-lg font-bold transition-all duration-200 hover:shadow-[0_0_100px_100px_rgba(255,255,255,0.15)_inset] active:scale-95 "
+            animate={{
+              opacity: 1,
+              y: 0,
+              transition: { delay: 1.5, duration: 0.5, ease: "easeInOut" },
+            }}
+            whileTap={{ scale: 0.95 }}
+            className=" mt-8 rounded-md border-purple-accent bg-transparent px-6 py-4 text-lg font-bold transition-shadow duration-200 hover:shadow-[0_0_100px_100px_rgba(255,255,255,0.15)_inset] active:scale-95 "
           >
             Contact Me
           </motion.button>
         </div>
       </div>
 
-      <motion.img
+      {/* <motion.img
         initial={{ opacity: 0, y: 45 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ ease: "easeInOut", duration: 0.5 }}
         src="/hero.svg"
         alt="hero"
         className="hidden lg:block lg:w-[24rem] xl:w-[30rem]  2xl:w-[40rem]"
-      />
+      /> */}
+
+      <HeroImage />
     </div>
   );
 };
