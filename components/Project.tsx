@@ -29,9 +29,9 @@ const Project: React.FC<Props> = ({
       <div
         className={`${
           reverse
-            ? "lg:col-start-2 lg:col-end-2 lg:row-start-1 lg:row-end-1"
-            : ""
-        } h-full w-full overflow-clip rounded-lg`}
+            ? "lg:col-start-2 lg:col-end-2 lg:row-start-1 lg:row-end-1 lg:rounded-br-lg lg:rounded-tr-lg"
+            : "lg:rounded-bl-lg lg:rounded-tl-lg "
+        } h-full w-full overflow-clip rounded-b-none`}
       >
         <Link href={image}>
           <img

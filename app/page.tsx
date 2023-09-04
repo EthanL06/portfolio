@@ -28,14 +28,6 @@ export default function Home() {
     };
   }, []);
 
-  useEffect(() => {
-    console.log(mousePos);
-  }, [mousePos]);
-
-  useEffect(() => {
-    console.log(scrollPos);
-  }, [scrollPos]);
-
   const gradientX = mousePos.x;
   const gradientY = mousePos.y + scrollPos; // Adjust for scroll position
 

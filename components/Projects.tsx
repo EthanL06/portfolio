@@ -11,7 +11,10 @@ const Projects = (props: Props) => {
   return (
     <div className="flex min-h-screen w-full flex-col items-center gap-y-12">
       <div className="text-center">
-        <div className="text-xl font-extrabold uppercase text-purple-accent">
+        <div
+          id="projects"
+          className="text-xl font-extrabold uppercase text-purple-accent"
+        >
           Projects
         </div>
         <div className="text-4xl font-bold">
