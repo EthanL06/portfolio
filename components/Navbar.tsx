@@ -21,15 +21,17 @@ const links = [
 type Props = {};
 const Navbar = (props: Props) => {
   return (
-    <nav className="pointer-events-none fixed top-0 z-10 flex w-full flex-col items-center justify-center border-b border-gray-600 md:pointer-events-auto">
-      <motion.div
-        initial={{ opacity: 0, y: 10 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ ease: "easeInOut", duration: 0.5 }}
-        className="pointer-events-auto flex w-full max-w-[90rem] items-center justify-between border-b border-gray-600  px-10 py-4 backdrop-blur md:border-none 2xl:px-4"
-      >
+    <nav className="pointer-events-none fixed top-0 z-10 flex w-full flex-col items-center justify-center border-gray-600  md:pointer-events-auto  ">
+      <div className="pointer-events-auto flex w-full  items-center justify-between border-gray-600  px-10 py-4 backdrop-blur-md md:border-none 2xl:px-44 ">
         <div className="flex items-center gap-x-32">
-          <img src="/logo.png" alt="logo" className="h-20 w-20" />
+          <motion.img
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ ease: "easeInOut", duration: 0.5 }}
+            src="/images/logo.png"
+            alt="logo"
+            className="h-20 w-20"
+          />
           <ul className=" hidden items-center gap-x-16 text-lg font-semibold text-nav-gray transition-all duration-100 ease-in-out md:flex">
             {links.map((link, index) => (
               <motion.ul
@@ -56,7 +58,7 @@ const Navbar = (props: Props) => {
           className=""
         >
           <svg
-            className="fill-light-white h-12 w-12 transition-all duration-200 ease-in-out hover:cursor-pointer hover:fill-purple-700"
+            className="h-12 w-12 fill-light-white transition-all duration-200 ease-in-out hover:cursor-pointer hover:fill-purple-700"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 496 512"
           >
@@ -80,7 +82,7 @@ const Navbar = (props: Props) => {
             />
           </svg>
         </button> */}
-      </motion.div>
+      </div>
 
       {/* <MobileNavbar /> */}
       <MobileBar />

@@ -20,7 +20,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ ease: "easeInOut", delay: 0.8, duration: 0.5 }}
-          className="text-text-gray mt-1 max-w-[37.5rem] text-left text-xl font-medium "
+          className="mt-1 max-w-[37.5rem] text-left text-xl font-medium text-text-gray "
         >
           Hi, I&apos;m <span className="font-bold text-light-white">Ethan</span>
           . A web developer from Texas.

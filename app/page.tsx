@@ -1,5 +1,6 @@
 "use client";
 
+import About from "@/components/About";
 import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
 import Projects from "@/components/Projects";
@@ -44,13 +45,18 @@ export default function Home() {
         background: `radial-gradient(600px at ${gradientX}px ${gradientY}px, rgba(134, 69, 175, 0.15), transparent 80%)`,
       }}
     >
-      <div className="  mx-auto flex min-h-screen max-w-[90rem] flex-col items-center px-10 2xl:px-4">
+      <div className="  mx-auto flex min-h-screen  flex-col items-center  pb-[14rem]">
         <Navbar />
 
-        <div className="min-h-[calc(100vh-152px)] w-full">
+        <div className="min-h-[calc(100vh-152px)] w-full max-w-[70rem] px-10 2xl:px-4 ">
           <Hero />
         </div>
-        <Projects />
+        <div className="w-full">
+          <About />
+        </div>
+        <div className="mt-40 w-full max-w-[70rem] px-10 sm:mt-80 2xl:px-4">
+          <Projects />
+        </div>
       </div>
     </div>
   );
