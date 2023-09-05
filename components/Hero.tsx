@@ -20,7 +20,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ ease: "easeInOut", delay: 0.8, duration: 0.5 }}
-          className="text-text-gray mt-1 max-w-[37.5rem] text-left text-xl font-medium "
+          className="mt-1 max-w-[37.5rem] text-left text-xl font-medium text-text-gray "
         >
           Hi, I&apos;m <span className="font-bold text-light-white">Ethan</span>
           . A web developer from Texas.
@@ -35,6 +35,18 @@ const Hero = () => {
               transition: { delay: 1.2, duration: 0.5, ease: "easeInOut" },
             }}
             whileTap={{ scale: 0.95 }}
+            onClick={() => {
+              // smooth scroll to #projects but with a little offset to account for the navbar
+              const projects = document.getElementById("projects");
+              if (projects) {
+                window.scrollTo({
+                  top: projects.offsetTop - 112,
+                  behavior: "smooth",
+                });
+
+                window.history.pushState({}, "", "#projects");
+              }
+            }}
             className=" mt-8 rounded-md bg-purple-accent px-6 py-4 text-lg font-bold transition-shadow duration-200 hover:shadow-[0_0_100px_100px_rgba(255,255,255,0.1)_inset] "
           >
             Explore my Projects
@@ -48,6 +60,18 @@ const Hero = () => {
               transition: { delay: 1.5, duration: 0.5, ease: "easeInOut" },
             }}
             whileTap={{ scale: 0.95 }}
+            onClick={() => {
+              // smooth scroll to #projects but with a little offset to account for the navbar
+              const projects = document.getElementById("contact");
+              if (projects) {
+                window.scrollTo({
+                  top: projects.offsetTop - 112,
+                  behavior: "smooth",
+                });
+
+                window.history.pushState({}, "", "#contact");
+              }
+            }}
             className=" mt-8 rounded-md border-purple-accent bg-transparent px-6 py-4 text-lg font-bold transition-shadow duration-200 hover:shadow-[0_0_100px_100px_rgba(255,255,255,0.15)_inset] active:scale-95 "
           >
             Contact Me
