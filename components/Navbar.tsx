@@ -204,7 +204,21 @@ const MobileBar = () => {
           </div>
         </button>
 
-        <button className="group flex flex-col items-center justify-center gap-y-2 pb-2 pt-6 hover:bg-gray-900/40">
+        <button
+          onClick={() => {
+            // smooth scroll to #projects but with a little offset to account for the navbar
+            const projects = document.getElementById("contact");
+            if (projects) {
+              window.scrollTo({
+                top: projects.offsetTop - 112,
+                behavior: "smooth",
+              });
+
+              window.history.pushState({}, "", "#contact");
+            }
+          }}
+          className="group flex flex-col items-center justify-center gap-y-2 pb-2 pt-6 hover:bg-gray-900/40"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
