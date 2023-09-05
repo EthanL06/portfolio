@@ -60,6 +60,18 @@ const Hero = () => {
               transition: { delay: 1.5, duration: 0.5, ease: "easeInOut" },
             }}
             whileTap={{ scale: 0.95 }}
+            onClick={() => {
+              // smooth scroll to #projects but with a little offset to account for the navbar
+              const projects = document.getElementById("contact");
+              if (projects) {
+                window.scrollTo({
+                  top: projects.offsetTop - 112,
+                  behavior: "smooth",
+                });
+
+                window.history.pushState({}, "", "#contact");
+              }
+            }}
             className=" mt-8 rounded-md border-purple-accent bg-transparent px-6 py-4 text-lg font-bold transition-shadow duration-200 hover:shadow-[0_0_100px_100px_rgba(255,255,255,0.15)_inset] active:scale-95 "
           >
             Contact Me
