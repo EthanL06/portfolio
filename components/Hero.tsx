@@ -35,6 +35,18 @@ const Hero = () => {
               transition: { delay: 1.2, duration: 0.5, ease: "easeInOut" },
             }}
             whileTap={{ scale: 0.95 }}
+            onClick={() => {
+              // smooth scroll to #projects but with a little offset to account for the navbar
+              const projects = document.getElementById("projects");
+              if (projects) {
+                window.scrollTo({
+                  top: projects.offsetTop - 112,
+                  behavior: "smooth",
+                });
+
+                window.history.pushState({}, "", "#projects");
+              }
+            }}
             className=" mt-8 rounded-md bg-purple-accent px-6 py-4 text-lg font-bold transition-shadow duration-200 hover:shadow-[0_0_100px_100px_rgba(255,255,255,0.1)_inset] "
           >
             Explore my Projects

@@ -8,8 +8,10 @@ type Props = {
   description: string;
   image: string;
   link: string;
+  repo: string;
   technologies: string[];
   reverse?: boolean;
+  index: number;
 };
 
 const Project: React.FC<Props> = ({
@@ -17,14 +19,25 @@ const Project: React.FC<Props> = ({
   description,
   image,
   link,
+  repo,
   technologies,
   reverse = false,
+  index,
 }: Props) => {
   const router = useRouter();
 
   return (
-    <div
-      className={`grid w-full max-w-none grid-cols-1 grid-rows-2 place-items-center rounded-md bg-[#383c4e]  sm:max-w-xl lg:min-h-[25rem] lg:max-w-none lg:grid-cols-2 lg:grid-rows-1 lg:gap-8`}
+    <motion.div
+      initial={{ opacity: 0, y: 10 }}
+      whileInView={{
+        opacity: 1,
+        y: 0,
+        transition: { delay: 0.1 * (index + 1), type: "spring" },
+      }}
+      viewport={{
+        once: true,
+      }}
+      className={` flex w-full max-w-none grid-cols-1 grid-rows-2 flex-col place-items-center rounded-md border-4 border-[#383c4e] bg-[#383c4e]  sm:max-w-xl  lg:grid lg:min-h-[25rem] lg:max-w-none lg:grid-cols-2 lg:grid-rows-1 lg:gap-8`}
     >
       <div
         className={`${
@@ -66,25 +79,28 @@ const Project: React.FC<Props> = ({
         />
 
         <div className="flex gap-x-4">
-          <motion.button
-            onClick={() => {
-              router.push(link);
-            }}
-            whileTap={{ scale: 0.95 }}
-            className="rounded-md bg-purple-accent px-6 py-4 text-lg font-bold transition-shadow duration-200 hover:shadow-[0_0_100px_100px_rgba(255,255,255,0.1)_inset]"
-          >
-            View Project
-          </motion.button>
+          <Link href={link} target="_blank">
+            <motion.button
+              whileTap={{ scale: 0.95 }}
+              className="rounded-md bg-purple-accent px-6 py-4 text-lg font-bold transition-shadow duration-200 hover:shadow-[0_0_100px_100px_rgba(255,255,255,0.1)_inset]"
+            >
+              View Project
+            </motion.button>
+          </Link>
 
-          <motion.button
-            whileTap={{ scale: 0.95 }}
-            className="rounded-md border-purple-accent bg-transparent px-6 py-4 text-lg font-bold transition-shadow duration-200 hover:shadow-[0_0_100px_100px_rgba(255,255,255,0.15)_inset] active:scale-95"
-          >
-            View Code
-          </motion.button>
+          {repo.length > 0 && (
+            <Link href={repo} target="_blank">
+              <motion.button
+                whileTap={{ scale: 0.95 }}
+                className="rounded-md border-purple-accent bg-transparent px-6 py-4 text-lg font-bold transition-shadow duration-200 hover:shadow-[0_0_100px_100px_rgba(255,255,255,0.15)_inset] active:scale-95"
+              >
+                View Code
+              </motion.button>
+            </Link>
+          )}
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

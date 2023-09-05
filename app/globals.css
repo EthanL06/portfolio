@@ -5,7 +5,7 @@
 @layer base {
   html,
   body {
-    @apply bg-background text-light-white;
+    @apply !scroll-smooth bg-background text-light-white;
   }
 }
 

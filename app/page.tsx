@@ -1,6 +1,7 @@
 "use client";
 
 import About from "@/components/About";
+import Contact from "@/components/Contact";
 import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
 import Projects from "@/components/Projects";
@@ -33,6 +34,7 @@ export default function Home() {
 
   return (
     <div
+      id="home"
       style={{
         background: `radial-gradient(600px at ${gradientX}px ${gradientY}px, rgba(134, 69, 175, 0.15), transparent 80%)`,
       }}
@@ -46,8 +48,12 @@ export default function Home() {
         <div className="w-full">
           <About />
         </div>
-        <div className="mt-40 w-full max-w-[70rem] px-10 sm:mt-80 2xl:px-4">
+        <div className="mt-40 w-full max-w-[70rem] px-6 sm:mt-80 2xl:px-4">
           <Projects />
+        </div>
+
+        <div className="mt-40 w-full max-w-[70rem] px-10 sm:mt-80 2xl:px-4">
+          <Contact />
         </div>
       </div>
     </div>

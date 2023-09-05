@@ -2,19 +2,20 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 const links = [
   {
     name: "Home",
-    href: "/",
+    href: "/#home",
   },
   {
     name: "Projects",
-    href: "/projects",
+    href: "/#projects",
   },
   {
     name: "Contact",
-    href: "/contact",
+    href: "/#contact",
   },
 ];
 
@@ -43,10 +44,24 @@ const Navbar = (props: Props) => {
                     delay: 0.3 * (index + 1),
                     duration: 0.5,
                   }}
-                  className="transition-colors duration-[250ms] before:mr-2 before:inline-block before:h-0 before:w-0 before:rounded-full before:bg-purple-accent before:align-middle before:transition-all before:duration-[250ms] before:content-[''] hover:scale-110 hover:font-extrabold hover:text-light-white hover:before:h-2 hover:before:w-2"
+                  className="transition-colors duration-[250ms] before:mr-2 before:inline-block before:h-0 before:w-0 before:rounded-full before:bg-purple-accent before:align-middle before:transition-all before:duration-[250ms] before:content-[''] hover:scale-110 hover:cursor-pointer hover:font-extrabold hover:text-light-white hover:before:h-2 hover:before:w-2"
                   key={link.name}
+                  onClick={() => {
+                    const element = document.getElementById(
+                      link.name.toLowerCase(),
+                    );
+
+                    if (element) {
+                      window.scrollTo({
+                        top: element.offsetTop - 112,
+                        behavior: "smooth",
+                      });
+
+                      window.history.pushState({}, "", link.href);
+                    }
+                  }}
                 >
-                  <Link href={link.href}>{link.name}</Link>
+                  {link.name}
                 </motion.ul>
               ))}
             </ul>
@@ -138,7 +153,15 @@ const MobileBar = () => {
           </svg>
 
           <div className="h-8 overflow-hidden">
-            <span className="relative top-4 text-sm font-bold text-purple-accent opacity-0 transition-all duration-200 ease-in-out group-hover:top-0 group-hover:opacity-100 ">
+            <span
+              onClick={() => {
+                window.scrollTo({
+                  top: 0,
+                  behavior: "smooth",
+                });
+              }}
+              className="relative top-4 text-sm font-bold text-purple-accent opacity-0 transition-all duration-200 ease-in-out group-hover:top-0 group-hover:opacity-100 "
+            >
               Home
             </span>
           </div>
@@ -153,6 +176,8 @@ const MobileBar = () => {
                 top: projects.offsetTop - 112,
                 behavior: "smooth",
               });
+
+              window.history.pushState({}, "", "#projects");
             }
           }}
           className="group flex flex-col items-center justify-center gap-y-2 border-r border-gray-600/50 pb-2 pt-6 hover:bg-gray-900/40"
