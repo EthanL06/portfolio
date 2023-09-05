@@ -14,9 +14,14 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const env = process.env.NODE_ENV;
   return (
     <html lang="en">
-      <body className={`${raleway.className} background debug-screens `}>
+      <body
+        className={`${raleway.className} ${
+          env == "development" && "debug-screens"
+        } background  `}
+      >
         {children}
       </body>
     </html>
