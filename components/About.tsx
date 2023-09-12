@@ -4,8 +4,8 @@ type Props = {};
 const About = (props: Props) => {
   return (
     <div className="full flex min-h-[30rem]  w-full justify-center ">
-      <div className="grid w-full max-w-[70rem] grid-cols-1 grid-rows-2  gap-x-8 px-10 py-12 lg:grid-cols-2 lg:grid-rows-1 2xl:px-4">
-        <div>
+      <div className="grid w-full max-w-[70rem] grid-cols-1 grid-rows-2 gap-x-8 px-5 py-12 sm:px-10 lg:grid-cols-2 lg:grid-rows-1 2xl:px-4">
+        <div className="flex flex-col items-center lg:items-start">
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             whileInView={{
@@ -32,7 +32,7 @@ const About = (props: Props) => {
               viewport={{
                 once: true,
               }}
-              className="text-4xl font-bold"
+              className="text-center text-4xl font-bold lg:text-left"
             >
               {" "}
               A Self-taught Developer

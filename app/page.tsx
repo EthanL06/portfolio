@@ -42,7 +42,7 @@ export default function Home() {
       <div className="  mx-auto flex min-h-screen  flex-col items-center  pb-[14rem]">
         <Navbar />
 
-        <div className="min-h-[calc(100vh-152px)] w-full max-w-[70rem] px-10 2xl:px-4 ">
+        <div className="min-h-[calc(100vh-152px)] w-full max-w-[70rem] px-4 sm:px-10 2xl:px-4 ">
           <Hero />
         </div>
         <div className="w-full">
