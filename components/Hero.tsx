@@ -13,8 +13,7 @@ const Hero = () => {
           transition={{ ease: "easeInOut", delay: 0.5, duration: 0.7 }}
           className="gradient-text overflow-hidden text-center text-5xl font-extrabold  leading-normal tracking-normal lg:whitespace-nowrap lg:text-left lg:text-[3.6875rem] "
         >
-          Bringing Ideas
-          <br className="block sm:hidden" />
+          Bringing Ideas <br className="block sm:hidden" />
           to Life.
         </motion.div>
 
