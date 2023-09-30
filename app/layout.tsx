@@ -2,9 +2,9 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Raleway } from "next/font/google";
 import Cursor from "@/components/Cursor";
-import Head from "next/head";
+import { Analytics } from "@vercel/analytics/react";
 
-const raleway = Raleway({ subsets: ["latin"] });
+const raleway = Raleway({ subsets: ["latin"], variable: "--font-inter" });
 
 export const metadata: Metadata = {
   title: "Ethan Lanting | Web Developer",
@@ -26,6 +26,7 @@ export default function RootLayout({
       >
         <Cursor />
         {children}
+        <Analytics />
       </body>
     </html>
   );

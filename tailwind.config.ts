@@ -23,6 +23,9 @@ const config: Config = {
         lg: "1080px",
         "2xl": "1450px",
       },
+      fontFamily: {
+        sans: ["var(--font-inter)"],
+      },
     },
   },
   plugins: [require("tailwindcss-debug-screens")],
