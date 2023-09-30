@@ -189,7 +189,7 @@ const Contact = (props: Props) => {
               }}
               whileTap={{ scale: 0.95 }}
               type="submit"
-              className=" purple w-full rounded-md bg-purple-accent px-6 py-4 text-lg font-bold transition-shadow duration-200 hover:shadow-[0_0_100px_100px_rgba(255,255,255,0.1)_inset] md:max-w-[10rem]  "
+              className=" purple w-full rounded-md bg-purple-accent px-6 py-4 text-lg font-bold text-white transition-shadow duration-200 hover:shadow-[0_0_100px_100px_rgba(255,255,255,0.1)_inset] md:max-w-[10rem]  "
             >
               Submit
             </motion.button>
