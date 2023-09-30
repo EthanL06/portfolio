@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-
+import Image from "next/image";
 type Props = {};
 const About = (props: Props) => {
   return (
@@ -103,9 +103,11 @@ const About = (props: Props) => {
           }}
           className="flex w-full justify-center"
         >
-          <img
+          <Image
             src="/images/about.svg"
             alt="about"
+            width={500}
+            height={500}
             className="w-[30rem] lg:h-full lg:w-full"
           />
         </motion.div>
