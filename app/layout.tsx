@@ -2,6 +2,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Raleway } from "next/font/google";
 import Cursor from "@/components/Cursor";
+import Head from "next/head";
 
 const raleway = Raleway({ subsets: ["latin"] });
 
