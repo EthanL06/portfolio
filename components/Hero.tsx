@@ -48,7 +48,7 @@ const Hero = () => {
                 window.history.pushState({}, "", "#projects");
               }
             }}
-            className=" w-full max-w-xs rounded-md bg-purple-accent px-6 py-4 text-lg font-bold transition-shadow duration-200 hover:shadow-[0_0_100px_100px_rgba(255,255,255,0.1)_inset] sm:mt-8 sm:w-auto"
+            className=" purple w-full max-w-xs rounded-md bg-purple-accent px-6 py-4 text-lg font-bold transition-shadow duration-200 hover:shadow-[0_0_100px_100px_rgba(255,255,255,0.1)_inset] sm:mt-8 sm:w-auto"
           >
             Explore my Projects
           </motion.button>
@@ -73,7 +73,7 @@ const Hero = () => {
                 window.history.pushState({}, "", "#contact");
               }
             }}
-            className=" w-full max-w-xs rounded-md border-purple-accent bg-transparent px-6 py-4 text-lg font-bold transition-shadow duration-200 hover:shadow-[0_0_100px_100px_rgba(255,255,255,0.15)_inset] active:scale-95 sm:mt-8 sm:w-auto"
+            className=" gray w-full max-w-xs rounded-md border-purple-accent bg-transparent px-6 py-4 text-lg font-bold transition-shadow duration-200 hover:shadow-[0_0_100px_100px_rgba(255,255,255,0.15)_inset] active:scale-95 sm:mt-8 sm:w-auto"
           >
             Contact Me
           </motion.button>

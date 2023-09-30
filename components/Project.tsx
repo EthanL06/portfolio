@@ -24,8 +24,6 @@ const Project: React.FC<Props> = ({
   reverse = false,
   index,
 }: Props) => {
-  const router = useRouter();
-
   return (
     <motion.div
       initial={{ opacity: 0, y: 10 }}
@@ -46,7 +44,7 @@ const Project: React.FC<Props> = ({
             : "lg:rounded-bl-lg lg:rounded-tl-lg "
         } h-full w-full overflow-clip rounded-b-none`}
       >
-        <Link href={link} target="_blank">
+        <Link className="gray" href={link} target="_blank">
           <img
             src={image}
             alt={title}
@@ -79,20 +77,20 @@ const Project: React.FC<Props> = ({
         />
 
         <div className="flex flex-wrap gap-4 md:flex-row">
-          <Link className="w-full md:w-auto" href={link} target="_blank">
+          <Link className="purple w-full md:w-auto" href={link} target="_blank">
             <motion.button
               whileTap={{ scale: 0.95 }}
-              className="w-full rounded-md bg-purple-accent px-6 py-4 text-lg font-bold transition-shadow duration-200 hover:shadow-[0_0_100px_100px_rgba(255,255,255,0.1)_inset] "
+              className=" w-full rounded-md bg-purple-accent px-6 py-4 text-lg font-bold transition-shadow duration-200 hover:shadow-[0_0_100px_100px_rgba(255,255,255,0.1)_inset] "
             >
               View Project
             </motion.button>
           </Link>
 
           {repo.length > 0 && (
-            <Link className="w-full md:w-auto" href={repo} target="_blank">
+            <Link className="gray w-full md:w-auto" href={repo} target="_blank">
               <motion.button
                 whileTap={{ scale: 0.95 }}
-                className="w-full rounded-md border-purple-accent bg-transparent px-6 py-4 text-lg font-bold transition-shadow duration-200 hover:shadow-[0_0_100px_100px_rgba(255,255,255,0.15)_inset] active:scale-95 lg:w-auto"
+                className=" w-full rounded-md border-purple-accent bg-transparent px-6 py-4 text-lg font-bold transition-shadow duration-200 hover:shadow-[0_0_100px_100px_rgba(255,255,255,0.15)_inset] active:scale-95 lg:w-auto"
               >
                 View Code
               </motion.button>

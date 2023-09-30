@@ -1,6 +1,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { Raleway } from "next/font/google";
+import Cursor from "@/components/Cursor";
 
 const raleway = Raleway({ subsets: ["latin"] });
 
@@ -22,6 +23,7 @@ export default function RootLayout({
           env == "development" && "debug-screens"
         } background  `}
       >
+        <Cursor />
         {children}
       </body>
     </html>

@@ -26,7 +26,7 @@ const Navbar = (props: Props) => {
       <nav className="pointer-events-none fixed top-0 z-10 flex w-full flex-col items-center justify-center border-gray-600  md:pointer-events-auto  ">
         <div className="pointer-events-auto flex w-full  items-center justify-between border-gray-600  px-10 py-4 backdrop-blur-md md:border-none 2xl:px-44 ">
           <div className="flex items-center gap-x-32">
-            <Link href="/">
+            <Link className="purple" href="/">
               <motion.img
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -46,7 +46,7 @@ const Navbar = (props: Props) => {
                     delay: 0.3 * (index + 1),
                     duration: 0.5,
                   }}
-                  className="transition-colors duration-[250ms] before:mr-2 before:inline-block before:h-0 before:w-0 before:rounded-full before:bg-purple-accent before:align-middle before:transition-all before:duration-[250ms] before:content-[''] hover:scale-110 hover:cursor-pointer hover:font-extrabold hover:text-light-white hover:before:h-2 hover:before:w-2"
+                  className="purple transition-colors duration-[250ms] before:mr-2 before:inline-block before:h-0 before:w-0 before:rounded-full before:bg-purple-accent before:align-middle before:transition-all before:duration-[250ms] before:content-[''] hover:scale-110 hover:cursor-pointer hover:font-extrabold hover:text-light-white hover:before:h-2 hover:before:w-2"
                   key={link.name}
                   onClick={() => {
                     const element = document.getElementById(
@@ -69,7 +69,11 @@ const Navbar = (props: Props) => {
             </ul>
           </div>
 
-          <Link href={"https://github.com/EthanL06"} target="_blank">
+          <Link
+            className="purple"
+            href={"https://github.com/EthanL06"}
+            target="_blank"
+          >
             <motion.div
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}

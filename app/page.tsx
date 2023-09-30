@@ -2,6 +2,7 @@
 
 import About from "@/components/About";
 import Contact from "@/components/Contact";
+import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
 import Projects from "@/components/Projects";
@@ -39,7 +40,7 @@ export default function Home() {
         background: `radial-gradient(600px at ${gradientX}px ${gradientY}px, rgba(134, 69, 175, 0.15), transparent 80%)`,
       }}
     >
-      <div className="  mx-auto flex min-h-screen  flex-col items-center  pb-[14rem]">
+      <div className="  mx-auto flex min-h-screen  flex-col items-center  pb-[4rem]">
         <Navbar />
 
         <div className="min-h-[calc(100vh-152px)] w-full max-w-[70rem] px-4 sm:px-10 2xl:px-4 ">
@@ -55,6 +56,8 @@ export default function Home() {
         <div className="mt-40 w-full max-w-[70rem] px-10 sm:mt-80 2xl:px-4">
           <Contact />
         </div>
+
+        <Footer />
       </div>
     </div>
   );
