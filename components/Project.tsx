@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 type Props = {
   title: string;
@@ -45,10 +45,13 @@ const Project: React.FC<Props> = ({
         } h-full w-full overflow-clip rounded-b-none`}
       >
         <Link className="gray" href={link} target="_blank">
-          <img
+          <Image
+            loading="lazy"
             src={image}
             alt={title}
             className="h-full w-full object-cover transition-all duration-1000 ease-in-out hover:scale-110"
+            width={524}
+            height={420}
           />
         </Link>
       </div>

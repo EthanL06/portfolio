@@ -40,7 +40,7 @@ export default function Home() {
         background: `radial-gradient(600px at ${gradientX}px ${gradientY}px, rgba(134, 69, 175, 0.15), transparent 80%)`,
       }}
     >
-      <div className="  mx-auto flex min-h-screen  flex-col items-center  pb-[4rem]">
+      <div className="  mx-auto flex min-h-screen  flex-col items-center  pb-[5rem]">
         <Navbar />
 
         <div className="min-h-[calc(100vh-152px)] w-full max-w-[70rem] px-4 sm:px-10 2xl:px-4 ">
