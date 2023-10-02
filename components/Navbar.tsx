@@ -38,6 +38,7 @@ const Navbar = (props: Props) => {
                   className="h-20 w-20"
                   width={300}
                   height={300}
+                  priority={true}
                 />
               </motion.div>
             </Link>

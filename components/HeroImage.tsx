@@ -147,7 +147,7 @@ const HeroImage = (props: Props) => {
           <path
             d="M800.468 349.46C775.101 366.283 731.385 375.801 669.319 378.014C607.253 380.228 551.124 383.326 500.932 387.311C450.739 391.295 393.531 390.852 329.306 385.983C265.081 381.113 238.905 369.603 250.779 351.452C262.652 333.302 279.923 318.546 302.59 307.183C325.258 295.821 353.593 286.155 387.594 278.187C421.595 270.218 466.661 261.954 522.79 253.396C578.919 244.837 630.731 246.46 678.225 258.265C725.719 270.071 764.307 284.015 793.991 300.1C823.675 316.184 825.834 332.638 800.468 349.46Z"
             fill="#6F64FE"
-            fill-opacity="0.5"
+            fillOpacity="0.5"
           />
         </g>
         <defs>
@@ -158,9 +158,9 @@ const HeroImage = (props: Props) => {
             width="1066"
             height="638"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feBlend
               mode="normal"
               in="SourceGraphic"

@@ -9,12 +9,16 @@ import Projects from "@/components/Projects";
 import { useEffect, useState } from "react";
 
 export default function Home() {
+  const [isMounted, setIsMounted] = useState(false);
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   const [scrollPos, setScrollPos] = useState(0);
-
-  const [screenWidth, setScreenWidth] = useState(window.innerWidth); // Initialize with the current screen width
+  const [screenWidth, setScreenWidth] = useState(
+    typeof window !== "undefined" ? window.innerWidth : 0,
+  );
 
   useEffect(() => {
+    setIsMounted(true);
+
     const handleMouseMove = (e: MouseEvent) => {
       setMousePos({ x: e.clientX, y: e.clientY });
     };
@@ -24,12 +28,12 @@ export default function Home() {
     };
 
     const handleResize = () => {
-      setScreenWidth(window.innerWidth); // Update screen width when window is resized
+      setScreenWidth(window.innerWidth);
     };
 
     document.addEventListener("mousemove", handleMouseMove);
     window.addEventListener("scroll", handleScroll);
-    window.addEventListener("resize", handleResize); // Listen for window resize events
+    window.addEventListener("resize", handleResize);
 
     return () => {
       document.removeEventListener("mousemove", handleMouseMove);
@@ -44,33 +48,35 @@ export default function Home() {
   const shouldApplyGradient = screenWidth > 768; // md breakpoint
 
   return (
-    <div
-      id="home"
-      style={{
-        background: shouldApplyGradient
-          ? `radial-gradient(600px at ${gradientX}px ${gradientY}px, rgba(134, 69, 175, 0.15), transparent 80%)`
-          : "transparent", // Set transparent background for smaller screens
-      }}
-    >
-      <div className="  mx-auto flex min-h-screen  flex-col items-center  pb-[5rem]">
-        <Navbar />
+    isMounted && (
+      <div
+        id="home"
+        style={{
+          background: shouldApplyGradient
+            ? `radial-gradient(600px at ${gradientX}px ${gradientY}px, rgba(134, 69, 175, 0.15), transparent 80%)`
+            : "transparent", // Set transparent background for smaller screens
+        }}
+      >
+        <div className="  mx-auto flex min-h-screen  flex-col items-center  pb-[5rem]">
+          <Navbar />
 
-        <div className="min-h-[calc(100vh-152px)] w-full max-w-[70rem] px-4 sm:px-10 2xl:px-4 ">
-          <Hero />
-        </div>
-        <div className="w-full">
-          <About />
-        </div>
-        <div className="mt-40 w-full max-w-[70rem] px-6 sm:mt-80 2xl:px-4">
-          <Projects />
-        </div>
+          <div className="min-h-[calc(100vh-152px)] w-full max-w-[70rem] px-4 sm:px-10 2xl:px-4 ">
+            <Hero />
+          </div>
+          <div className="w-full">
+            <About />
+          </div>
+          <div className="mt-40 w-full max-w-[70rem] px-6 sm:mt-80 2xl:px-4">
+            <Projects />
+          </div>
 
-        <div className="mt-40 w-full max-w-[70rem] px-10 sm:mt-80 2xl:px-4">
-          <Contact />
-        </div>
+          <div className="mt-40 w-full max-w-[70rem] px-10 sm:mt-80 2xl:px-4">
+            <Contact />
+          </div>
 
-        <Footer />
+          <Footer />
+        </div>
       </div>
-    </div>
+    )
   );
 }
