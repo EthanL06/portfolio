@@ -9,6 +9,22 @@ const raleway = Raleway({ subsets: ["latin"], variable: "--font-inter" });
 export const metadata: Metadata = {
   title: "Ethan Lanting | Web Developer",
   description: "A self-taught web developer from Texas.",
+  themeColor: "#9390ff",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://ethanlanting.dev/",
+    title: "Ethan Lanting | Web Developer",
+    description: "A self-taught web developer from Texas.",
+    images: [
+      {
+        url: "https://ethanlanting.dev/opengraph-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Ethan Lanting | Web Developer",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({

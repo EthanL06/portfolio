@@ -7,9 +7,10 @@ const HeroImage = (props: Props) => {
       initial={{ opacity: 0, y: 40 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className="hidden  lg:block  lg:w-[24rem] xl:w-[30rem] 2xl:w-[40rem]"
+      className="relative  hidden  lg:block lg:w-[24rem] xl:w-[30rem] 2xl:w-[40rem]"
     >
       <svg
+        className="z-10"
         xmlns="http://www.w3.org/2000/svg"
         data-name="Layer 1"
         viewBox="0 0 878.63037 483"
@@ -134,6 +135,44 @@ const HeroImage = (props: Props) => {
           transform="translate(-160.68481 -208.5)"
           fill="#6A66FF"
         />
+      </svg>
+
+      <svg
+        className="absolute left-1/2 top-8 z-0 -translate-x-1/2 lg:w-[24rem] xl:w-[30rem] 2xl:w-[40rem]"
+        viewBox="0 0 1066 638"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g filter="url(#filter0_f_1_4)">
+          <path
+            d="M800.468 349.46C775.101 366.283 731.385 375.801 669.319 378.014C607.253 380.228 551.124 383.326 500.932 387.311C450.739 391.295 393.531 390.852 329.306 385.983C265.081 381.113 238.905 369.603 250.779 351.452C262.652 333.302 279.923 318.546 302.59 307.183C325.258 295.821 353.593 286.155 387.594 278.187C421.595 270.218 466.661 261.954 522.79 253.396C578.919 244.837 630.731 246.46 678.225 258.265C725.719 270.071 764.307 284.015 793.991 300.1C823.675 316.184 825.834 332.638 800.468 349.46Z"
+            fill="#6F64FE"
+            fill-opacity="0.5"
+          />
+        </g>
+        <defs>
+          <filter
+            id="filter0_f_1_4"
+            x="0"
+            y="0"
+            width="1066"
+            height="638"
+            filterUnits="userSpaceOnUse"
+            color-interpolation-filters="sRGB"
+          >
+            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feBlend
+              mode="normal"
+              in="SourceGraphic"
+              in2="BackgroundImageFix"
+              result="shape"
+            />
+            <feGaussianBlur
+              stdDeviation="124"
+              result="effect1_foregroundBlur_1_4"
+            />
+          </filter>
+        </defs>
       </svg>
     </motion.div>
   );

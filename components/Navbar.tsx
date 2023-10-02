@@ -27,15 +27,6 @@ const Navbar = (props: Props) => {
         <div className="pointer-events-auto flex w-full  items-center justify-between border-gray-600  px-10 py-4 backdrop-blur-md md:border-none 2xl:px-44 ">
           <div className="flex items-center gap-x-32">
             <Link className="purple" href="/">
-              {/* <motion.img
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ ease: "easeInOut", duration: 0.5 }}
-                src="/images/logo.png"
-                alt="logo"
-                className="h-20 w-20"
-              /> */}
-
               <motion.div
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -45,8 +36,8 @@ const Navbar = (props: Props) => {
                   src="/images/logo.png"
                   alt="logo"
                   className="h-20 w-20"
-                  width={200}
-                  height={200}
+                  width={300}
+                  height={300}
                 />
               </motion.div>
             </Link>
