@@ -12,6 +12,8 @@ export default function Home() {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   const [scrollPos, setScrollPos] = useState(0);
 
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth); // Initialize with the current screen width
+
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
       setMousePos({ x: e.clientX, y: e.clientY });
@@ -21,23 +23,33 @@ export default function Home() {
       setScrollPos(window.scrollY);
     };
 
+    const handleResize = () => {
+      setScreenWidth(window.innerWidth); // Update screen width when window is resized
+    };
+
     document.addEventListener("mousemove", handleMouseMove);
     window.addEventListener("scroll", handleScroll);
+    window.addEventListener("resize", handleResize); // Listen for window resize events
 
     return () => {
       document.removeEventListener("mousemove", handleMouseMove);
       window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
 
   const gradientX = mousePos.x;
   const gradientY = mousePos.y + scrollPos; // Adjust for scroll position
 
+  const shouldApplyGradient = screenWidth > 768; // md breakpoint
+
   return (
     <div
       id="home"
       style={{
-        background: `radial-gradient(600px at ${gradientX}px ${gradientY}px, rgba(134, 69, 175, 0.15), transparent 80%)`,
+        background: shouldApplyGradient
+          ? `radial-gradient(600px at ${gradientX}px ${gradientY}px, rgba(134, 69, 175, 0.15), transparent 80%)`
+          : "transparent", // Set transparent background for smaller screens
       }}
     >
       <div className="  mx-auto flex min-h-screen  flex-col items-center  pb-[5rem]">
