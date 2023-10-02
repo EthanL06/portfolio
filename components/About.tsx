@@ -101,14 +101,14 @@ const About = (props: Props) => {
           viewport={{
             once: true,
           }}
-          className="flex w-full justify-center"
+          className="flex w-full justify-center "
         >
           <Image
             src="/images/about.svg"
             alt="about"
             width={500}
             height={500}
-            className="w-[30rem] lg:h-full lg:w-full"
+            className="w-[30rem] select-none lg:h-full lg:w-full"
           />
         </motion.div>
       </div>

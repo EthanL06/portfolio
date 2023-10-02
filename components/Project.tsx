@@ -49,16 +49,16 @@ const Project: React.FC<Props> = ({
             loading="lazy"
             src={image}
             alt={title}
-            className="h-full w-full object-cover transition-all duration-1000 ease-in-out hover:scale-110"
-            width={524}
-            height={420}
+            className="h-full w-full select-none object-cover transition-all duration-1000 ease-in-out hover:scale-110"
+            width={524 * 2}
+            height={420 * 2}
           />
         </Link>
       </div>
       <div
         className={`${
           reverse ? "lg:pl-12" : "lg:pr-12"
-        } flex h-full w-full flex-col gap-y-4 px-8 py-8 lg:px-0 lg:px-12 `}
+        } flex h-full w-full flex-col gap-y-4 px-8 py-8 lg:px-12 `}
       >
         <div className="text-4xl font-bold">{title}</div>
         <div className="flex flex-wrap gap-2">
