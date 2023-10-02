@@ -9,7 +9,7 @@ const raleway = Raleway({ subsets: ["latin"], variable: "--font-inter" });
 export const metadata: Metadata = {
   title: "Ethan Lanting | Web Developer",
   description: "A self-taught web developer from Texas.",
-  themeColor: "#9390ff",
+  themeColor: "#252734",
   openGraph: {
     type: "website",
     locale: "en_US",
