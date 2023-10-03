@@ -82,7 +82,7 @@ const Contact = (props: Props) => {
           whileInView={{
             opacity: 1,
             y: 0,
-            transition: { delay: 0.3, type: "spring" },
+            transition: { type: "spring" },
           }}
           viewport={{
             once: true,
@@ -97,7 +97,7 @@ const Contact = (props: Props) => {
           whileInView={{
             opacity: 1,
             y: 0,
-            transition: { delay: 0.4, type: "spring" },
+            transition: { type: "spring" },
           }}
           viewport={{
             once: true,
@@ -115,7 +115,7 @@ const Contact = (props: Props) => {
           whileInView={{
             opacity: 1,
             y: 0,
-            transition: { delay: 0.4, type: "spring" },
+            transition: { type: "spring" },
           }}
           viewport={{
             once: true,
@@ -141,7 +141,7 @@ const Contact = (props: Props) => {
             whileInView={{
               opacity: 1,
               y: 0,
-              transition: { delay: 0.4, type: "spring" },
+              transition: { type: "spring" },
             }}
             viewport={{
               once: true,
@@ -165,7 +165,7 @@ const Contact = (props: Props) => {
             whileInView={{
               opacity: 1,
               y: 0,
-              transition: { delay: 0.4, type: "spring" },
+              transition: { type: "spring" },
             }}
             viewport={{
               once: true,
@@ -189,7 +189,7 @@ const Contact = (props: Props) => {
             whileInView={{
               opacity: 1,
               y: 0,
-              transition: { delay: 0.4, type: "spring" },
+              transition: { type: "spring" },
             }}
             viewport={{
               once: true,
@@ -212,7 +212,7 @@ const Contact = (props: Props) => {
             whileInView={{
               opacity: 1,
               y: 0,
-              transition: { delay: 0.4, type: "spring" },
+              transition: { type: "spring" },
             }}
             viewport={{
               once: true,
@@ -224,7 +224,7 @@ const Contact = (props: Props) => {
               animate={{
                 opacity: 1,
                 y: 0,
-                transition: { delay: 1.2, duration: 0.5, ease: "easeInOut" },
+                transition: { duration: 0.5, ease: "easeInOut" },
               }}
               whileTap={{ scale: 0.95 }}
               type="submit"

@@ -59,7 +59,6 @@ export default function Home() {
       >
         <div className="  mx-auto flex min-h-screen  flex-col items-center  pb-[5rem]">
           <Navbar />
-
           <div className="min-h-[calc(100vh-152px)] w-full max-w-[70rem] px-4 sm:px-10 2xl:px-4 ">
             <Hero />
           </div>
@@ -69,11 +68,12 @@ export default function Home() {
           <div className="mt-40 w-full max-w-[70rem] px-6 sm:mt-80 2xl:px-4">
             <Projects />
           </div>
-
           <div className="mt-40 w-full max-w-[70rem] px-10 sm:mt-80 2xl:px-4">
             <Contact />
           </div>
-
+          <span className="mt-20 text-lg font-bold text-red-400">
+            DO NOT SCROLL DOWN!
+          </span>
           <Footer />
         </div>
       </div>

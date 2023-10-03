@@ -11,7 +11,7 @@ const About = (props: Props) => {
             whileInView={{
               opacity: 1,
               y: 0,
-              transition: { delay: 0.3, type: "spring" },
+              transition: { type: "spring" },
             }}
             viewport={{
               once: true,
@@ -27,7 +27,7 @@ const About = (props: Props) => {
               whileInView={{
                 opacity: 1,
                 y: 0,
-                transition: { delay: 0.4, type: "spring" },
+                transition: { type: "spring" },
               }}
               viewport={{
                 once: true,
