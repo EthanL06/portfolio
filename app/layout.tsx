@@ -43,8 +43,8 @@ export default function RootLayout({
           env == "development" && "debug-screens"
         } background  `}
       >
-        <Cursor />
         {children}
+        <Cursor />
         <Analytics />
       </body>
     </html>
