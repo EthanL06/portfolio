@@ -2,7 +2,7 @@
   {
     "title": "Galaxy Adventures",
     "description": "Simulates a space tourism agency with a comprehensive booking system to plan your next trip to space destinations. <br/> <br/> Built for the 2023 Webmasters Competition for the Technology Student Association. Won 2nd place in the state of Texas and 4th in the nation.",
-    "image": "/images/galaxy_adventures.png",
+    "image": "/images/galaxy_adventures.webp",
     "link": "https://galaxyadventures.vercel.app/",
     "repo": "https://github.com/EthanL06/Galaxy-Adventures",
     "technologies": ["React", "Next.js", "Tailwind CSS", "Framer Motion"]
@@ -10,7 +10,7 @@
   {
     "title": "HealthGPT",
     "description": "AI patient diagnosis system that uses GPT-3 to generate a diagnosis based on patient symptoms. <br/> <br/> Won 5th in the 2023 Computer Science Youth of America Hackathon.",
-    "image": "/images/healthgpt.png",
+    "image": "/images/healthgpt.webp",
     "link": "https://healthgpt-iota.vercel.app/",
     "repo": "https://github.com/EthanL06/healthgpt",
     "technologies": [
@@ -24,7 +24,7 @@
   {
     "title": "Planet Facts",
     "description": "Simple educational website that displays facts about the planets in our solar system.",
-    "image": "/images/planet_facts.png",
+    "image": "/images/planet_facts.webp",
     "link": "https://the-planet-facts.vercel.app/",
     "repo": "https://github.com/EthanL06/Planet-Facts",
     "technologies": ["React", "Tailwind CSS"]
@@ -32,7 +32,7 @@
   {
     "title": "The Health Education Project",
     "description": "Developed a website for a non-profit organization that provides free, reliable health education to the public.",
-    "image": "/images/the_health_education_project.png",
+    "image": "/images/the_health_education_project.webp",
     "link": "https://thehealtheducationproject.com/",
     "repo": "",
     "technologies": ["React", "Next.js", "Tailwind CSS"]
@@ -40,7 +40,7 @@
   {
     "title": "PassPal",
     "description": "Password generator with customizable settings to generate a password that fits your needs.",
-    "image": "/images/passpal.png",
+    "image": "/images/passpal.webp",
     "link": "https://passpal.vercel.app/",
     "repo": "https://github.com/EthanL06/passpal",
     "technologies": ["React", "Next.js", "Tailwind CSS"]
@@ -48,7 +48,7 @@
   {
     "title": "Advice Generator",
     "description": "A word of advice.",
-    "image": "/images/advice_generator.png",
+    "image": "/images/advice_generator.webp",
     "link": "https://the-advice-generator.vercel.app/",
     "repo": "https://github.com/EthanL06/Advice-Generator",
     "technologies": ["React", "Tailwind CSS", "Advice Slip API"]

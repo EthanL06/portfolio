@@ -29,7 +29,7 @@ const Footer = (props: Props) => {
         <Image
           loading="lazy"
           alt="scary image"
-          src="/images/scary_image.png"
+          src="/images/scary_image.webp"
           className="h-[1000px] w-[2000px] "
           width={900}
           height={600}

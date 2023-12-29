@@ -33,7 +33,7 @@ const Navbar = (props: Props) => {
                 transition={{ ease: "easeInOut", duration: 0.5 }}
               >
                 <Image
-                  src="/images/logo.png"
+                  src="/images/logo.webp"
                   alt="logo"
                   className="h-20 w-20"
                   width={300}
