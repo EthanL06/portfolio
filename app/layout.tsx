@@ -1,7 +1,6 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { Raleway } from "next/font/google";
-import Cursor from "@/components/Cursor";
 import { Analytics } from "@vercel/analytics/react";
 
 const raleway = Raleway({ subsets: ["latin"], variable: "--font-inter" });
@@ -44,7 +43,6 @@ export default function RootLayout({
         } background  `}
       >
         {children}
-        <Cursor />
         <Analytics />
       </body>
     </html>
