@@ -1,11 +1,56 @@
+"use client";
+
 import { motion } from "framer-motion";
 import Project from "./Project";
 
-import data from "../data/projects.json";
-
+import { createClient } from "next-sanity";
+import { useEffect, useState } from "react";
 type Props = {};
 
+type Project = {
+  title: string;
+  description: string;
+  createdAt: string;
+  link: string;
+  repo: string;
+  technologies: string[];
+  image: string;
+};
+
+const client = createClient({
+  projectId: "u9xvjiw4",
+  dataset: "production",
+  useCdn: false,
+});
+
+const getProjects = async () => {
+  const data = await client.fetch(
+    `*[_type == "projects"] {
+      title,
+      description,
+      createdAt,
+      link,
+      repo,
+      technologies,
+      image,
+    }`,
+  );
+
+  // Sort by date in descending order
+  data.sort((a: Project, b: Project) => {
+    return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime();
+  });
+
+  return data as Project[];
+};
+
 const Projects = (props: Props) => {
+  const [data, setData] = useState([] as Project[]);
+
+  useEffect(() => {
+    getProjects().then((data) => setData(data));
+  }, []);
+
   return (
     <div className="flex min-h-screen w-full flex-col items-center gap-y-12">
       <div className="text-center">
