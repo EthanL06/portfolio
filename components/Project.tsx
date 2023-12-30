@@ -35,7 +35,7 @@ const Project: React.FC<Props> = ({
       viewport={{
         once: true,
       }}
-      className={` flex w-full max-w-none grid-cols-1 grid-rows-2 flex-col place-items-center rounded-md border-4 border-[#383c4e] bg-[#383c4e]  sm:max-w-xl  lg:grid lg:min-h-[25rem] lg:max-w-none lg:grid-cols-2 lg:grid-rows-1 lg:gap-8`}
+      className={` flex w-full max-w-none grid-cols-1 grid-rows-2 flex-col place-items-center rounded-md  bg-[#383c4e]  sm:max-w-xl  lg:grid lg:min-h-[25rem] lg:max-w-none lg:grid-cols-2 lg:grid-rows-1 lg:gap-8`}
     >
       <div
         className={`${

@@ -2,13 +2,13 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Raleway } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
+import type { Viewport } from "next";
 
 const raleway = Raleway({ subsets: ["latin"], variable: "--font-inter" });
 
 export const metadata: Metadata = {
   title: "Ethan Lanting | Web Developer",
   description: "A self-taught web developer from Texas.",
-  themeColor: "#252734",
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -27,6 +27,10 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary",
   },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#252734",
 };
 
 export default function RootLayout({
