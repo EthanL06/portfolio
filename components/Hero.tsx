@@ -8,10 +8,16 @@ const Hero = () => {
     <div className="flex min-h-screen w-full items-center justify-between">
       <div className="flex w-full flex-col justify-center lg:w-auto">
         <motion.div
-          initial={{ width: 0 }}
-          animate={{ width: "100%" }}
+          initial={{
+            opacity: 0,
+            y: 10,
+          }}
+          animate={{
+            opacity: 1,
+            y: 0,
+          }}
           transition={{ ease: "easeInOut", delay: 0.5, duration: 0.7 }}
-          className="gradient-text overflow-hidden text-center text-5xl font-extrabold  leading-normal tracking-normal lg:whitespace-nowrap lg:text-left lg:text-[3.6875rem] "
+          className="gradient-text relative overflow-hidden text-center text-5xl font-extrabold  leading-normal tracking-normal lg:whitespace-nowrap lg:text-left lg:text-[3.6875rem] "
         >
           Bringing Ideas <br className="block sm:hidden" />
           to Life.

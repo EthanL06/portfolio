@@ -24,7 +24,7 @@ const Navbar = (props: Props) => {
   return (
     <>
       <nav className="pointer-events-none fixed top-0 z-10 flex w-full flex-col items-center justify-center border-gray-600  md:pointer-events-auto  ">
-        <div className="pointer-events-auto flex w-full  items-center justify-between border-gray-600  px-10 py-4 backdrop-blur-md md:border-none 2xl:px-44 ">
+        <div className="pointer-events-auto flex w-full  items-center justify-between border-gray-600  px-10 py-2 backdrop-blur-md md:border-none 2xl:px-44 ">
           <div className="flex items-center gap-x-32">
             <Link className="purple" href="/">
               <motion.div
@@ -119,21 +119,6 @@ const Navbar = (props: Props) => {
 
       <MobileBar />
     </>
-  );
-};
-
-const MobileNavbar = () => {
-  return (
-    <div className=" flex min-h-[calc(100vh-112px)] w-full flex-col backdrop-blur-3xl md:hidden">
-      {links.map((link, index) => (
-        <button
-          className="w-full border-b border-gray-700 px-10 py-12 text-center text-2xl font-bold transition-all duration-200 ease-in-out hover:bg-gray-900/40"
-          key={index}
-        >
-          {link.name}
-        </button>
-      ))}
-    </div>
   );
 };
 
