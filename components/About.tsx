@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 type Props = {};
 const About = (props: Props) => {
   return (
@@ -66,8 +67,9 @@ const About = (props: Props) => {
                   once: true,
                 }}
               >
-                I have been working with web development for about 2 years now
-                and I have learned a lot. I have worked with many different
+                I&apos;ve been programming for the past 7 years, been doing web
+                development for about {new Date().getFullYear() - 2021} years
+                now, and I have learned a lot. I have worked with many different
                 technologies and frameworks such as React, Next.js, Tailwind
                 CSS, and more. I am currently working on a few projects that I
                 hope to release soon.
@@ -86,8 +88,11 @@ const About = (props: Props) => {
                 }}
               >
                 Also, I am looking for a job as a web developer. If you are
-                interested in hiring me, please contact me through the contact
-                page. I would love to work with you!
+                interested in hiring me, please{" "}
+                <Link className="font-semibold underline" href="/#contact">
+                  contact me!
+                </Link>{" "}
+                I would love to work with you!
               </motion.span>
               <br />
             </p>
