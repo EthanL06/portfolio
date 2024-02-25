@@ -23,7 +23,7 @@ type Props = {};
 const Navbar = (props: Props) => {
   return (
     <>
-      <nav className="pointer-events-none fixed top-0 z-10 flex w-full flex-col items-center justify-center border-gray-600  md:pointer-events-auto  ">
+      <nav className="pointer-events-none absolute top-0 z-10 flex w-full flex-col items-center justify-center border-gray-600 md:pointer-events-auto  md:fixed  ">
         <div className="pointer-events-auto flex w-full  items-center justify-between border-gray-600  px-10 py-2 backdrop-blur-md md:border-none 2xl:px-44 ">
           <div className="flex items-center gap-x-32">
             <Link className="purple" href="/">
@@ -95,26 +95,7 @@ const Navbar = (props: Props) => {
               </svg>
             </motion.div>
           </Link>
-
-          {/* <button className="scale-100 rounded-lg p-2 transition-all duration-200 ease-in-out hover:bg-gray-900/10 active:scale-90 md:hidden">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth={1.5}
-            stroke="currentColor"
-            className="h-8 w-8"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-            />
-          </svg>
-        </button> */}
         </div>
-
-        {/* <MobileNavbar /> */}
       </nav>
 
       <MobileBar />
