@@ -153,10 +153,9 @@ const MobileBar = () => {
             const projects = document.getElementById("projects");
             if (projects) {
               window.scrollTo({
-                top: projects.offsetTop - 112,
+                top: projects.offsetTop - 48,
                 behavior: "smooth",
               });
-
               window.history.pushState({}, "", "#projects");
             }
           }}
@@ -187,10 +186,10 @@ const MobileBar = () => {
         <button
           onClick={() => {
             // smooth scroll to #projects but with a little offset to account for the navbar
-            const projects = document.getElementById("contact");
-            if (projects) {
+            const contact = document.getElementById("contact");
+            if (contact) {
               window.scrollTo({
-                top: projects.offsetTop - 112,
+                top: contact.offsetTop,
                 behavior: "smooth",
               });
 
