@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -24,6 +24,24 @@ const Project: React.FC<Props> = ({
   reverse = false,
   index,
 }: Props) => {
+  const [readMore, setReadMore] = useState(description.length < 200);
+  let newDescription = <></>;
+  if (!readMore) {
+    newDescription = (
+      <>
+        {description.slice(0, 200)}...
+        <button
+          onClick={() => setReadMore(true)}
+          className="font-bold text-purple-accent hover:underline"
+        >
+          Read More
+        </button>
+      </>
+    );
+  } else {
+    newDescription = <div>{description}</div>;
+  }
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 10 }}
@@ -50,8 +68,8 @@ const Project: React.FC<Props> = ({
             src={image}
             alt={title}
             className="h-full w-full select-none object-cover transition-all duration-1000 ease-in-out hover:scale-110"
-            width={524 * 2}
-            height={420 * 2}
+            width={524 * 3}
+            height={420 * 3}
           />
         </Link>
       </div>
@@ -74,10 +92,12 @@ const Project: React.FC<Props> = ({
 
         <div
           className="flex-grow whitespace-pre-line font-medium text-text-gray"
-          dangerouslySetInnerHTML={{
-            __html: description,
-          }}
-        />
+          // dangerouslySetInnerHTML={{
+          //   __html: newDescription,
+          // }}
+        >
+          {newDescription}
+        </div>
 
         <div className="flex flex-wrap gap-4 md:flex-row">
           <Link className="purple w-full md:w-auto" href={link} target="_blank">
