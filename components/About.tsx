@@ -50,9 +50,9 @@ const About = (props: Props) => {
                   once: true,
                 }}
               >
-                Hey there! I&apos;m Ethan Lanting. I currently attend high
-                school as a senior, and I am looking to pursue a career in web
-                development.
+                Hey there!, I&apos;m Ethan Lanting. I&apos;m a freshman at the
+                University of Texas at Austin, majoring in Computer Science and
+                looking to pursue a career in web development.
               </motion.span>
               <br />
               <br />
